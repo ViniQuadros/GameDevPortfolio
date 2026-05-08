@@ -1,0 +1,146 @@
+.sobreMim {
+    background-color: var(--beige);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.sobreMim h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: -1px;
+    position: relative;
+    padding-bottom: 14px;
+}
+
+.sobreMim img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 80%;
+    border: 3px solid rgba(61, 61, 61, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.informacoes {
+    background-color: var(--beige);
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.resumo,
+.habilidades {
+    text-align: center;
+    border-radius: 16px;
+    padding: 15px;
+    backdrop-filter: blur(6px);
+    border: 3px solid rgba(104, 104, 104, 0.2);
+    min-width: 280px;
+    width: 500px;
+    height: 300px;
+    margin-bottom: 50px;
+}
+
+.habilidades h2,
+.resumo h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--tea-green);
+}
+
+.habilidades ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.habilidades li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: background 0.2s ease, transform 0.2s ease;
+    font-size: 0.95rem;
+}
+.habilidades li::before {
+    content: "▹";
+    color: var(--tea-green);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+.habilidades li:hover {
+    background: rgba(129, 141, 91, 0.12);
+    transform: translateX(4px);
+}
+
+.projetoLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.melhoresProjetos {
+    background-color: var(--cornsilk);
+    padding: 20px 20px;
+    text-align: center;
+    width: 100%;
+}
+.melhoresProjetos h2 {
+    margin-bottom: 30px;
+}
+
+.contato {
+    padding: 20px 20px;
+    text-align: center;
+    background-color: var(--beige);
+}
+
+.contato h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #294618;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.contatoLinks {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.contatoItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #294618;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.contatoItem:hover {
+    transform: translateY(-5px);
+    background: var(--tea-green);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}

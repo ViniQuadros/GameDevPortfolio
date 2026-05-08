@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinícius de Quadros</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/sobreMim.css">
+    <script src="assets/js/sobreMim.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="sobreMim.html">Sobre Mim</a>
+            <a href="projetos.html">Todos Projetos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <div class="switcherButtons">
+        <button class="switcher active" onclick="switchContent('about')">Sobre Mim</button>
+        <button class="switcher" onclick="switchContent('projects')">Qualificações</button>
+    </div>
+
+    <div class="content" id="about">
+        <h2>Minha trajetória:</h2>
+        <p>Meu nome é Vinícius de Quadros, tenho 23 anos e sou desenvolvedor de jogos brasileiro. <br>
+            Desde sempre fui apaixonado por jogos, mas comecei de fato a entender o mundo de desenvolvimento de jogos
+            alguns anos atrás (mais especifiamente em 2021) utilizando a plataforma "Snap!".</p>
+        <div class="jogosFavoritos">
+            <h2>Meus Jogos Favoritos:</h2>
+            <div class="gridJogos">
+                <img src="assets/images/sh2-cover.jpg" alt="Silent Hill 2">
+                <img src="assets/images/tw3-cover.jpg" alt="Jogo 2">
+                <img src="assets/images/tlou-cover.jpg" alt="Jogo 3">
+                <img src="assets/images/twd-cover.jpg" alt="Jogo 4">
+                <img src="assets/images/re1-cover.jpg" alt="Jogo 5">
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="projects">
+        <a href="assets/pdf/Currículo (Desatualizado).pdf" target="_blank" class="curriculo">Currículo</a>
+        <span>&#8595;</span>
+        <h2>Trabalhos:</h2>
+        <ul>
+            <li>Suporte de TI (2023-2025)</li>
+            <li>Técnico em Química (2023)</li>
+        </ul>
+        <hr>
+        <h2>Educação:</h2>
+        <ul>
+            <li>Bacharelado em Ciência da Computação - Universidade Feevale (2024-Presente)</li>
+            <li>Intercâmbio para o Canadá - Concordia University of Edmonton (2026)</li>
+            <li>Bacharelado em Jogos Digitais - UniRitter (2023-2025)</li>
+            <li>Curso Técnico em Química - Fundação Escola Técnica Liberato Salzano Vieira da Cunha (2019-2023)</li>
+        </ul>
+        <hr>
+        <h2>Idiomas:</h2>
+        <ul>
+            <li>Português - Nativo</li>
+            <li>Inglês - Fluente</li>
+            <li>Françês - Intermediário</li>
+            <li>Espanhol - Intermediário</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>By Vinícius de Quadros</p>
+    </footer>
+</body>
+
+</html>
