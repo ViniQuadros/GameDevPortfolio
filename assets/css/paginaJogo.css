@@ -102,5 +102,4 @@ button {
 
 button:hover {
     background-color: var(--light-bronze);
-    transform: translateY(-2px);
 }

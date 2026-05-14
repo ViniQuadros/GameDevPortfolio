@@ -58,6 +58,14 @@
     border-bottom: 2px solid var(--tea-green);
 }
 
+.resumo p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: justify;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
 .habilidades ul {
     list-style: none;
     padding: 0;
@@ -66,6 +74,7 @@
     flex-direction: column;
     gap: 10px;
 }
+
 .habilidades li {
     display: flex;
     align-items: center;
@@ -76,12 +85,14 @@
     transition: background 0.2s ease, transform 0.2s ease;
     font-size: 0.95rem;
 }
+
 .habilidades li::before {
     content: "▹";
     color: var(--tea-green);
     font-size: 1.1rem;
     flex-shrink: 0;
 }
+
 .habilidades li:hover {
     background: rgba(129, 141, 91, 0.12);
     transform: translateX(4px);
@@ -99,6 +110,7 @@
     text-align: center;
     width: 100%;
 }
+
 .melhoresProjetos h2 {
     margin-bottom: 30px;
 }
@@ -139,6 +151,7 @@
     transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
+
 .contatoItem:hover {
     transform: translateY(-5px);
     background: var(--tea-green);

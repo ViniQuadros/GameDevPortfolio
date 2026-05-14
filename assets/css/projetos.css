@@ -5,6 +5,7 @@
     max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 50px;
+    align-items: start;
 }
 
 /* From Uiverse.io by SteveBloX */
@@ -40,7 +41,7 @@
 
 .projeto img {
     width: 100%;
-    height: 140px;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 12px;
