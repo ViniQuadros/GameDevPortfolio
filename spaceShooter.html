@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinícius de Quadros</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/paginaJogo.css">
+    <script src="assets/js/carrossel.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="sobreMim.html">Sobre Mim</a>
+            <a href="projetos.html">Todos Projetos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+
+    <div class="carrossel">
+        <h1>Space Shooter</h1>
+        <button class="carrosselBtn prev" onclick="moveSlide(-1)">&#8592;</button>
+
+        <div class="carrosselTrack">
+            <img src="assets/images/unity/spaceShooter/SpaceShooterMenu_Unity.png" alt="Screenshot 1">
+            <img src="assets/images/unity/spaceShooter/SpaceShooterClassic_Unity.png" alt="Screenshot 2">
+            <img src="assets/images/unity/spaceShooter/SpaceShooterRoguelike_Unity.png" alt="Screenshot 3">
+        </div>
+
+        <button class="carrosselBtn next" onclick="moveSlide(1)">&#8594;</button>
+
+        <div class="carrosselDots" id="dots"></div>
+    </div>
+
+    <div class="descricaoProjeto">
+        <div>
+            <button onclick="window.open('https://github.com/ViniQuadros/Unity_SpaceShooter', '_blank')">
+                Código Fonte
+            </button>
+            <h2>Sobre o Projeto:</h2>
+            <p>"Space Shooter" é um jogo de tiro 2D desenvolvido em Unity, com visão top-down. O jogo conta com 2 modos de jogo: Clássico e Roguelike.
+            <p> No modo Clássico, o jogador fica parado apenas atirando contra os asteroides inimigos enquanto coleta Power Ups para ajudá-lo. Cada asteroide derrotado concede pontos e no fim o jogador recebe uma pontuação final.</p>
+            <p> No modo Roguelike, o jogador vai derrotando os inimigos e acumulando pontos de experiência para aprimorar sua nave. O mapa é gerado proceduralmente a cada partida com planetas em que o jogador deve evitar sua órbita.</p>
+        </div>
+        <div>
+            <h2>Pontos-Chave:</h2>
+            <ul>
+                <li>Desenvolvimento em Unity e C#</li>
+                <li>Pooling de Objetos</li>
+                <li>Modos de Jogo</li>
+                <li>Top-Down Shooter</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>By Vinícius de Quadros</p>
+    </footer>
+</body>
+
+</html>
