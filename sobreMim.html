@@ -8,32 +8,46 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/sobreMim.css">
     <script src="assets/js/sobreMim.js" defer></script>
+
+    <script src="assets/js/translations.js" defer></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="sobreMim.html">Sobre Mim</a>
-            <a href="projetos.html">Todos Projetos</a>
-            <a href="contato.html">Contato</a>
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="sobreMim.html" data-i18n="nav.about">Sobre Mim</a>
+            <a href="projetos.html" data-i18n="nav.projects">Todos Projetos</a>
+            <a href="contato.html" data-i18n="nav.contact">Contato</a>
         </nav>
+
+        <div class="langSwitcher">
+            <button onclick="switchLanguage('pt')" class="langBtn" id="btn-pt">
+                <img src="https://flagcdn.com/w40/br.png" alt="Português">
+                <span>PT</span>
+            </button>
+            <span>|</span>
+            <button onclick="switchLanguage('en')" class="langBtn" id="btn-en">
+                <img src="https://flagcdn.com/w40/us.png" alt="English">
+                <span>EN</span>
+            </button>
+        </div>
     </header>
 
     <div class="switcherButtons">
-        <button class="switcher active" onclick="switchContent('about')">Sobre Mim</button>
-        <button class="switcher" onclick="switchContent('projects')">Qualificações</button>
+        <button class="switcher active" onclick="switchContent('about')" data-i18n="about.title1">Sobre Mim</button>
+        <button class="switcher" onclick="switchContent('projects')" data-i18n="about.title2">Qualificações</button>
     </div>
 
     <div class="content" id="about">
-        <h2>Minha trajetória:</h2>
-        <p> Meu nome é Vinícius de Quadros, tenho 23 anos e sou desenvolvedor de jogos brasileiro. </p>
-        <p> Desde sempre fui apaixonado por jogos, mas comecei de fato a entender o mundo de desenvolvimento de jogos alguns anos atrás (mais especifiamente em 2021) utilizando a plataforma "Snap!". A partir deste ponto fui aos poucos explorando diferentes possibilidades e buscando mais conhecimentos com C++ e C# utilizando as engines Unity e Unreal. </p>
-        <p> Em 2023 comecei uma faculdade de Jogos Ditais pela Universidade UniRitter e, em 2024, comecei a o curso de Ciência da Computação na Universidade Feevale, a fim de adquirir mais uma especialização na área. Com isso aprendi algumas outras linguagens como Python e Java. </p>
-        <p> No ambito profissional, trabalhei como Suporte de TI  e tive a oportunidade de desenvolver minhas habilidades em um ambiente dinâmico e colaborativo. Para projetos internos, utilizei a linguagem de programação Python. </p>
-        <p> Atualmente estou em busca de oportunidades para aplicar meus conhecimentos e crescer profissionalmente como programador de jogos. </p>
+        <h2 data-i18n="about.trajectitle">Minha trajetória:</h2>
+        <p data-i18n="about.trajectory1"> Meu nome é Vinícius de Quadros, tenho 23 anos e sou desenvolvedor de jogos brasileiro. </p>
+        <p data-i18n="about.trajectory2"> Desde sempre fui apaixonado por jogos, mas comecei de fato a entender o mundo de desenvolvimento de jogos alguns anos atrás (mais especifiamente em 2021) utilizando a plataforma 'Snap!'. A partir deste ponto fui aos poucos explorando diferentes possibilidades e buscando mais conhecimentos com C++ e C# utilizando as engines Unity e Unreal. </p>
+        <p data-i18n="about.trajectory3"> Em 2023 comecei uma faculdade de Jogos Ditais pela Universidade UniRitter e, em 2024, comecei a o curso de Ciência da Computação na Universidade Feevale, a fim de adquirir mais uma especialização na área. Com isso aprendi algumas outras linguagens como Python e Java. </p>
+        <p data-i18n="about.trajectory4"> No ambito profissional, trabalhei como Suporte de TI  e tive a oportunidade de desenvolver minhas habilidades em um ambiente dinâmico e colaborativo. Para projetos internos, utilizei a linguagem de programação Python. </p>
+        <p data-i18n="about.trajectory5"> Atualmente estou em busca de oportunidades para aplicar meus conhecimentos e crescer profissionalmente como programador de jogos. </p>
         <div class="jogosFavoritos">
-            <h2>Meus Jogos Favoritos:</h2>
+            <h2 data-i18n="about.favgames">Meus Jogos Favoritos:</h2>
             <div class="gridJogos">
                 <img src="assets/images/gameCovers/sh2-cover.jpg" alt="Silent Hill 2">
                 <img src="assets/images/gameCovers/tw3-cover.jpg" alt="The Witcher 3">
@@ -45,33 +59,33 @@
     </div>
 
     <div class="content" id="projects">
-        <a href="assets/pdf/Currículo.pdf" target="_blank" class="curriculo">Currículo</a>
+        <a href="assets/pdf/Currículo.pdf" target="_blank" class="curriculo" data-i18n="qualifications.resume">Currículo</a>
         <span>&#8595;</span>
-        <h2>Trabalhos:</h2>
+        <h2 data-i18n="qualifications.jobs">Trabalhos:</h2>
         <ul>
-            <li>Suporte de TI (2023-2025)</li>
-            <li>Técnico em Química (2023)</li>
+            <li data-i18n="qualifications.job1">Suporte de TI (2023-2025)</li>
+            <li data-i18n="qualifications.job2">Técnico em Química (2023)</li>
         </ul>
         <hr>
-        <h2>Educação:</h2>
+        <h2 data-i18n="qualifications.education">Educação:</h2>
         <ul>
-            <li>Bacharelado em Ciência da Computação - Universidade Feevale (2024-Presente)</li>
-            <li>Intercâmbio para o Canadá - Concordia University of Edmonton (2026)</li>
-            <li>Bacharelado em Jogos Digitais - UniRitter (2023-2025)</li>
-            <li>Curso Técnico em Química - Fundação Escola Técnica Liberato Salzano Vieira da Cunha (2019-2023)</li>
+            <li data-i18n="qualifications.edu1">Bacharelado em Ciência da Computação - Universidade Feevale (2024-Presente)</li>
+            <li data-i18n="qualifications.edu2">Intercâmbio para o Canadá - Concordia University of Edmonton (2026)</li>
+            <li data-i18n="qualifications.edu3">Bacharelado em Jogos Digitais - UniRitter (2023-2025)</li>
+            <li data-i18n="qualifications.edu4">Curso Técnico em Química - Fundação Escola Técnica Liberato Salzano Vieira da Cunha (2019-2023)</li>
         </ul>
         <hr>
-        <h2>Idiomas:</h2>
+        <h2 data-i18n="qualifications.languages">Idiomas:</h2>
         <ul>
-            <li>Português - Nativo</li>
-            <li>Inglês - Fluente</li>
-            <li>Françês - Intermediário</li>
-            <li>Espanhol - Intermediário</li>
+            <li data-i18n="qualifications.lang1">Português - Nativo</li>
+            <li data-i18n="qualifications.lang2">Inglês - Fluente</li>
+            <li data-i18n="qualifications.lang3">Françês - Intermediário</li>
+            <li data-i18n="qualifications.lang4">Espanhol - Intermediário</li>
         </ul>
     </div>
 
     <footer>
-        <p>Por Vinícius de Quadros</p>
+        <p data-i18n="footer.footer">Por Vinícius de Quadros</p>
     </footer>
 </body>
 

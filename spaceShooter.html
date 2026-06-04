@@ -7,19 +7,32 @@
     <title>Vinícius de Quadros</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/paginaJogo.css">
+
     <script src="assets/js/carrossel.js" defer></script>
+    <script src="assets/js/translations.js" defer></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="sobreMim.html">Sobre Mim</a>
-            <a href="projetos.html">Todos Projetos</a>
-            <a href="contato.html">Contato</a>
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="sobreMim.html" data-i18n="nav.about">Sobre Mim</a>
+            <a href="projetos.html" data-i18n="nav.projects">Todos Projetos</a>
+            <a href="contato.html" data-i18n="nav.contact">Contato</a>
         </nav>
-    </header>
 
+        <div class="langSwitcher">
+            <button onclick="switchLanguage('pt')" class="langBtn" id="btn-pt">
+                <img src="https://flagcdn.com/w40/br.png" alt="Português">
+                <span>PT</span>
+            </button>
+            <span>|</span>
+            <button onclick="switchLanguage('en')" class="langBtn" id="btn-en">
+                <img src="https://flagcdn.com/w40/us.png" alt="English">
+                <span>EN</span>
+            </button>
+        </div>
+    </header>
 
     <div class="carrossel">
         <h1>Space Shooter</h1>
@@ -38,27 +51,27 @@
 
     <div class="descricaoProjeto">
         <div>
-            <button onclick="window.open('https://github.com/ViniQuadros/Unity_SpaceShooter', '_blank')">
+            <button onclick="window.open('https://github.com/ViniQuadros/Unity_SpaceShooter', '_blank')" data-i18n="bestgames.code">
                 Código Fonte
             </button>
-            <h2>Sobre o Projeto:</h2>
-            <p>"Space Shooter" é um jogo de tiro 2D desenvolvido em Unity, com visão top-down. O jogo conta com 2 modos de jogo: Clássico e Roguelike.
-            <p> No modo Clássico, o jogador fica parado apenas atirando contra os asteroides inimigos enquanto coleta Power Ups para ajudá-lo. Cada asteroide derrotado concede pontos e no fim o jogador recebe uma pontuação final.</p>
-            <p> No modo Roguelike, o jogador vai derrotando os inimigos e acumulando pontos de experiência para aprimorar sua nave. O mapa é gerado proceduralmente a cada partida com planetas em que o jogador deve evitar sua órbita.</p>
+            <h2 data-i18n="bestgames.abot">Sobre o Projeto:</h2>
+            <p data-i18n="bestgames.bg2p1">'Space Shooter' é um jogo de tiro 2D desenvolvido em Unity, com visão top-down. O jogo conta com 2 modos de jogo: Clássico e Roguelike.
+            <p data-i18n="bestgames.bg2p2"> No modo Clássico, o jogador fica parado apenas atirando contra os asteroides inimigos enquanto coleta Power Ups para ajudá-lo. Cada asteroide derrotado concede pontos e no fim o jogador recebe uma pontuação final.</p>
+            <p data-i18n="bestgames.bg2p3"> No modo Roguelike, o jogador vai derrotando os inimigos e acumulando pontos de experiência para aprimorar sua nave. O mapa é gerado proceduralmente a cada partida com planetas em que o jogador deve evitar sua órbita.</p>
         </div>
         <div>
-            <h2>Pontos-Chave:</h2>
+            <h2 data-i18n="bestgames.key">Pontos-Chave:</h2>
             <ul>
-                <li>Desenvolvimento em Unity e C#</li>
-                <li>Pooling de Objetos</li>
-                <li>Modos de Jogo</li>
-                <li>Top-Down Shooter</li>
+                <li data-i18n="bestgames.bg2tag1">Desenvolvimento em Unity e C#</li>
+                <li data-i18n="bestgames.bg2tag2">Pooling de Objetos</li>
+                <li data-i18n="bestgames.bg2tag3">Modos de Jogo</li>
+                <li data-i18n="bestgames.bg2tag4">Top-Down Shooter</li>
             </ul>
         </div>
     </div>
 
     <footer>
-        <p>Por Vinícius de Quadros</p>
+        <p data-i18n="footer.footer">Por Vinícius de Quadros</p>
     </footer>
 </body>
 

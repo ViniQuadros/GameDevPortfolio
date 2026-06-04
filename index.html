@@ -10,16 +10,30 @@
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/projetos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="assets/js/translations.js" defer></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="sobreMim.html">Sobre Mim</a>
-            <a href="projetos.html">Todos Projetos</a>
-            <a href="contato.html">Contato</a>
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="sobreMim.html" data-i18n="nav.about">Sobre Mim</a>
+            <a href="projetos.html" data-i18n="nav.projects">Todos Projetos</a>
+            <a href="contato.html" data-i18n="nav.contact">Contato</a>
         </nav>
+
+        <div class="langSwitcher">
+            <button onclick="switchLanguage('pt')" class="langBtn" id="btn-pt">
+                <img src="https://flagcdn.com/w40/br.png" alt="Português">
+                <span>PT</span>
+            </button>
+            <span>|</span>
+            <button onclick="switchLanguage('en')" class="langBtn" id="btn-en">
+                <img src="https://flagcdn.com/w40/us.png" alt="English">
+                <span>EN</span>
+            </button>
+        </div>
     </header>
 
     <div class="sobreMim" id="about">
@@ -28,47 +42,54 @@
     </div>
     <div class="informacoes">
         <div class="resumo">
-            <h2>Resumo</h2>
-            <p>Sou um programador de jogos apaixonado por video games e tecnologia. Busco criar jogos divertidos que me inspirem e desafiem para crescer profissionalmente. Estou em busca de seguir aprendendo mais e aprimorando minhas habilidades enquanto desenvolvo jogos especiais para futuros jogadores.</p>
+            <h2 data-i18n="homepage.summarytitle">Resumo</h2>
+            <p data-i18n="homepage.summary">Sou um programador de jogos apaixonado por video games e tecnologia. Busco
+                criar jogos divertidos que me
+                inspirem e desafiem para crescer profissionalmente. Estou em busca de seguir aprendendo mais e
+                aprimorando minhas habilidades enquanto desenvolvo jogos especiais para futuros jogadores.</p>
         </div>
         <div class="habilidades">
-            <h2>Habilidades</h2>
+            <h2 data-i18n="homepage.skills">Habilidades</h2>
             <ul>
-                <li>Programação em C# e C++</li>
-                <li>Desenvolvimento de jogos com Unity e Unreal Engine</li>
-                <li>Controle de versão com Git</li>
-                <li>Design de jogos e mecânicas</li>
-                <li>Trabalho em equipe e colaboração</li>
+                <li data-i18n="homepage.skill1">Programação em C# e C++</li>
+                <li data-i18n="homepage.skill2">Desenvolvimento de jogos com Unity e Unreal Engine</li>
+                <li data-i18n="homepage.skill3">Controle de versão com Git</li>
+                <li data-i18n="homepage.skill4">Design de jogos e mecânicas</li>
+                <li data-i18n="homepage.skill5">Trabalho em equipe e colaboração</li>
             </ul>
         </div>
     </div>
 
     <div class="melhoresProjetos" id="projects">
-        <h2>Melhores Projetos</h2>
+        <h2 data-i18n="homepage.bestprojects">Melhores Projetos</h2>
         <div class="gridProjetos">
             <a href="dontquit.html" class="projetoLink">
                 <div class="projeto">
                     <img src="assets/images/unity/dontQuit/dontquit1.png" alt="Don't Quit Unity">
                     <h3>Don't Quit</h3>
-                    <p> Um jogo de plataforma 2D inspirado em 'Level Devil'.</p>
+                    <p data-i18n="homepage.bp1"> Um jogo de plataforma 2D inspirado em 'Level Devil' com 10 fases e
+                        desafios diferentes para o
+                        jogador.</p>
                     <div class="tags">
                         <span class="tag">Unity</span>
                         <span class="tag">2D</span>
                         <span class="tag">C#</span>
-                        <span class="tag">Plataforma</span>
+                        <span class="tag">Platformer</span>
                     </div>
                 </div>
             </a>
             <a href="spaceShooter.html" class="projetoLink">
                 <div class="projeto">
-                    <img src="assets/images/unity/spaceShooter/SpaceShooterRoguelike_Unity.png" alt="Space Shooter Unity">
+                    <img src="assets/images/unity/spaceShooter/SpaceShooterRoguelike_Unity.png"
+                        alt="Space Shooter Unity">
                     <h3>Space Shooter</h3>
-                    <p>Um jogo top-down 2D de tiro com uma nave espacial. O jogo conta com 2 modos: Clássico e Roguelike.</p>
+                    <p data-i18n="homepage.bp2">Um jogo top-down 2D de tiro com uma nave espacial. O jogo conta com 2
+                        modos: Clássico e Roguelike.</p>
                     <div class="tags">
                         <span class="tag">Unity</span>
                         <span class="tag">2D</span>
                         <span class="tag">C#</span>
-                        <span class="tag">Tiro</span>
+                        <span class="tag">Shooter</span>
                         <span class="tag">Roguelike</span>
                     </div>
                 </div>
@@ -78,7 +99,7 @@
     </div>
 
     <div class="contato" id="contato">
-        <h2>Contato</h2>
+        <h2 data-i18n="contact.contact">Contato</h2>
         <div class="contatoLinks">
             <a href="mailto:viniciusquadross@hotmail.com" class="contatoItem" title="Email">
                 <i class="fas fa-envelope"></i>
@@ -94,7 +115,7 @@
     </div>
 
     <footer>
-        <p>Por Vinícius de Quadros</p>
+        <p data-i18n="footer.footer">Por Vinícius de Quadros</p>
     </footer>
 </body>
 

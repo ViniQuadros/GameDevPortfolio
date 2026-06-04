@@ -8,26 +8,40 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/contato.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="assets/js/translations.js" defer></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="sobreMim.html">Sobre Mim</a>
-            <a href="projetos.html">Todos Projetos</a>
-            <a href="contato.html">Contato</a>
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="sobreMim.html" data-i18n="nav.about">Sobre Mim</a>
+            <a href="projetos.html" data-i18n="nav.projects">Todos Projetos</a>
+            <a href="contato.html" data-i18n="nav.contact">Contato</a>
         </nav>
+
+        <div class="langSwitcher">
+            <button onclick="switchLanguage('pt')" class="langBtn" id="btn-pt">
+                <img src="https://flagcdn.com/w40/br.png" alt="Português">
+                <span>PT</span>
+            </button>
+            <span>|</span>
+            <button onclick="switchLanguage('en')" class="langBtn" id="btn-en">
+                <img src="https://flagcdn.com/w40/us.png" alt="English">
+                <span>EN</span>
+            </button>
+        </div>
     </header>
 
     <div class="contato" id="contato">
         <div class="infos">
-            <p>Vinícius de Quadros - Programador de Jogos</p>
-            <p>Rio Grande do Sul - Brasil</p>
+            <p data-i18n="contact.title">Vinícius de Quadros - Desenvolvedor de Jogos</p>
+            <p data-i18n="contact.location">Rio Grande do Sul - Brasil</p>
             <p>Email: viniciusquadross@hotmail.com</p>
-            <p>Telefone: +55 51 99770-6244</p>
+            <p data-i18n="contact.phone">Telefone: +55 51 99770-6244</p>
         </div>
-        <h2>Links Rápidos</h2>
+        <h2 data-i18n="contact.links">Links Rápidos</h2>
         <div class="contatoLinks">
             <a href="mailto:viniciusquadross@hotmail.com" class="contatoItem" title="Email">
                 <i class="fas fa-envelope"></i>
@@ -43,7 +57,7 @@
     </div>
 
     <footer>
-        <p>Por Vinícius de Quadros</p>
+        <p data-i18n="footer.footer">Por Vinícius de Quadros</p>
     </footer>
 </body>
 

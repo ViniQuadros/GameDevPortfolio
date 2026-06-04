@@ -9,16 +9,30 @@
     <link rel="stylesheet" href="assets/css/projetos.css">
     <link rel="stylesheet" href="assets/css/todosProjetos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="assets/js/translations.js" defer></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="sobreMim.html">Sobre Mim</a>
-            <a href="projetos.html">Todos Projetos</a>
-            <a href="contato.html">Contato</a>
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="sobreMim.html" data-i18n="nav.about">Sobre Mim</a>
+            <a href="projetos.html" data-i18n="nav.projects">Todos Projetos</a>
+            <a href="contato.html" data-i18n="nav.contact">Contato</a>
         </nav>
+
+        <div class="langSwitcher">
+            <button onclick="switchLanguage('pt')" class="langBtn" id="btn-pt">
+                <img src="https://flagcdn.com/w40/br.png" alt="Português">
+                <span>PT</span>
+            </button>
+            <span>|</span>
+            <button onclick="switchLanguage('en')" class="langBtn" id="btn-en">
+                <img src="https://flagcdn.com/w40/us.png" alt="English">
+                <span>EN</span>
+            </button>
+        </div>
     </header>
 
     <div class="todosProjetos" id="unity">
@@ -27,143 +41,142 @@
             <div class="projeto">
                 <img src="assets/images/unity/geral/RebuildTheCastle_Unity.png" alt="Rebuild The Castle Unity">
                 <h3>Rebuild The Castle</h3>
-                <p>Desenvolvi um jogo de plataforma 2D usando Unity, com gráficos pixel art e mecânicas de combate.</p>
+                <p data-i18n="projects.unity1">Desenvolvi um jogo de plataforma 2D usando Unity, com gráficos pixel art e mecânicas de combate.</p>
                 <div class="tags">
-                    <span class="tag">Física 2D</span>
-                    <span class="tag">IA Inimiga</span>
-                    <span class="tag">Compra de Itens</span>
+                    <span class="tag" data-i18n="projects.unity1tag1">Física 2D</span>
+                    <span class="tag" data-i18n="projects.unity1tag2">IA Inimiga</span>
+                    <span class="tag" data-i18n="projects.unity3">Compra de Itens</span>
                 </div>
             </div>
             <div class="projeto">
                 <img src="assets/images/unity/geral/Runners_Unity.png" alt="Runners Unity">
                 <h3>Runners</h3>
-                <p>Jogo em que dois jogadores competem em um endless runner com obstáculos e Power-Ups para ver quem
+                <p data-i18n="projects.unity2">Jogo em que dois jogadores competem em um endless runner com obstáculos e Power-Ups para ver quem
                     sobrevive mais tempo.</p>
                 <div class="tags">
-                    <span class="tag">2 Jogadores</span>
-                    <span class="tag">Level Infinito</span>
+                    <span class="tag" data-i18n="projects.unity2tag1">2 Jogadores</span>
+                    <span class="tag" data-i18n="projects.unity2tag2">Level Infinito</span>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="todosProjetos" id="unreal">
         <h2><img src="assets/images/unreal-icon.png" alt="Unreal Engine" id="unrealIcon"> Unreal Engine </h2>
         <div class="gridProjetos">
             <div class="projeto">
                 <img src="assets/images/unreal/escapeRoom.jpg" alt="Escape Room Unreal">
                 <h3>Escape Room</h3>
-                <p>Um jogo que você deve resolver puzzles para avançar até escapar da casa.</p>
+                <p data-i18n="projects.unreal1">Um jogo que você deve resolver puzzles para avançar até escapar da casa.</p>
                 <div class="tags">
-                    <span class="tag">Puzzle</span>
-                    <span class="tag">Mecânicas</span>
+                    <span class="tag" data-i18n="projects.unreal1tag1">Puzzle</span>
+                    <span class="tag" data-i18n="projects.unreal1tag2">Progressão de Level</span>
                 </div>
             </div>
             <div class="projeto">
                 <img src="assets/images/unreal/plataformer.jpg" alt="Plataformer Unreal">
-                <h3>Plataformer</h3>
-                <p>Um jogo de plataforma 3D, em primeira pessoa. O jogador pode utilizar diferentes Orbes para resolver
+                <h3>Orbs Plataformer</h3>
+                <p data-i18n="projects.unreal2">Um jogo de plataforma 3D, em primeira pessoa. O jogador pode utilizar diferentes Orbes com diferentes habilidades para resolver
                     os desafios.</p>
                 <div class="tags">
-                    <span class="tag">Plataforma</span>
-                    <span class="tag">Primeira Pessoa</span>
+                    <span class="tag" data-i18n="projects.unreal2tag1">Plataforma</span>
+                    <span class="tag" data-i18n="projects.unreal2tag2">Primeira Pessoa</span>
                 </div>
             </div>
             <div class="projeto">
                 <img src="assets/images/unreal/inventorySystem.jpg" alt="Inventory System Unreal">
                 <h3>Inventory System</h3>
-                <p>Um simples sistema de inventário, permitindo que o jogador gerencie seus itens e equipamentos e
+                <p data-i18n="projects.unreal3">Um simples sistema de inventário, permitindo que o jogador gerencie seus itens e equipamentos e
                     interaja com eles.</p>
                 <div class="tags">
-                    <span class="tag">Arrays</span>
-                    <span class="tag">UI</span>
+                    <span class="tag" data-i18n="projects.unreal3tag1">Arrays</span>
+                    <span class="tag" data-i18n="projects.unreal3tag2">UI</span>
                 </div>
             </div>
             <div class="projeto">
                 <img src="assets/images/unreal/timerShooter.png" alt="Timer Shooter Unreal">
                 <h3>Timer Shooter</h3>
-                <p>Um FPS em que o jogador deve atingir o máximo alvos antes que o tempo acabe. Em momentos aleatórios a
-                    tela vai escurecer e um alvo especial surge que, se o jogador não atingir a tempo, ele perde.</p>
+                <p data-i18n="projects.unreal4">Um FPS em que o jogador deve atingir o máximo alvos antes que o tempo acabe. Em momentos aleatórios a tela vai escurecer e um alvo especial surge que, se o jogador não atingir a tempo, ele perde.</p>
                 <div class="tags">
-                    <span class="tag">Eventos</span>
-                    <span class="tag">FPS</span>
-                    <span class="tag">Spawn</span>
+                    <span class="tag" data-i18n="projects.unreal4tag1">Eventos com Tempo</span>
+                    <span class="tag" data-i18n="projects.unreal4tag2">FPS</span>
+                    <span class="tag" data-i18n="projects.unreal4tag3">Spawn</span>
                 </div>
             </div>
             <div class="projeto">
                 <img src="assets/images/unreal/medievalCombat.png" alt="Medieval Combat Unreal">
                 <h3>Medieval Combat</h3>
-                <p>Um jogo em 3° pessoa com combate de espadas e um chefe no fim da fase.</p>
+                <p data-i18n="projects.unreal5">Um jogo em 3° pessoa com combate de espadas e um chefe no fim da fase.</p>
                 <div class="tags">
-                    <span class="tag">AI Inimiga</span>
-                    <span class="tag">Animações</span>
-                    <span class="tag">UI</span>
+                    <span class="tag" data-i18n="projects.unreal5tag1">IA Inimiga</span>
+                    <span class="tag" data-i18n="projects.unreal5tag2">Animações</span>
+                    <span class="tag" data-i18n="projects.unreal5tag3">UI</span>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="todosProjetos" id="sfml">
         <h2><i class="fa-solid fa-power-off"></i> SFML(C++) </h2>
         <div class="gridProjetos">
             <div class="projeto">
                 <img src="assets/images/sfml/drawingProgram_SFML.png" alt="Drawing Program SFML">
                 <h3>Drawing Program</h3>
-                <p>Um simples programa de desenho em SFML, permitindo usar um lápis para desenhar. É possível mudar a
-                    cor da linha assim como a cor do fundo.</p>
+                <p data-i18n="projects.sfml1">Um simples programa de desenho em SFML, permitindo usar um lápis para desenhar. É possível mudar a cor da linha assim como a cor do fundo.</p>
                 <div class="tags">
-                    <span class="tag">UI</span>
-                    <span class="tag">Classes</span>
-                    <span class="tag">Vertex</span>
+                    <span class="tag" data-i18n="projects.sfml1tag1">UI</span>
+                    <span class="tag" data-i18n="projects.sfml1tag2">Classes</span>
+                    <span class="tag" data-i18n="projects.sfml1tag3">Vertex</span>
                 </div>
             </div>
             <div class="projeto">
                 <img src="assets/images/sfml/Raycast_SFML.png" alt="Raycast SFML">
                 <h3>Raycaster</h3>
-                <p>Raycasting em SFML, criando uma experiência de jogo 3D com gráficos em wireframe.</p>
+                <p data-i18n="projects.sfml2">Raycasting em SFML, criando uma experiência de jogo 3D com gráficos em wireframe.</p>
                 <div class="tags">
-                    <span class="tag">Espaço 3D</span>
-                    <span class="tag">Gráficos</span>
+                    <span class="tag" data-i18n="projects.sfml2tag1">Colisões</span>
+                    <span class="tag" data-i18n="projects.sfml2tag2">Texturas</span>
                 </div>
             </div>
             <div class="projeto">
                 <img src="assets/images/sfml/Pathfinder_SFML.png" alt="Pathfinder SFML">
                 <h3>Pathfinder</h3>
-                <p>Sistema de pathfinding em SFML, permitindo que o ponto inicial encontre o caminho mais eficiente para
-                    o ponto final.</p>
+                <p data-i18n="projects.sfml3">Sistema de pathfinding em SFML, permitindo que o ponto inicial encontre o caminho mais eficiente para o ponto final.</p>
                 <div class="tags">
-                    <span class="tag">Algoritmo</span>
-                    <span class="tag">IA</span>
+                    <span class="tag" data-i18n="projects.sfml3tag1">Algoritmo</span>
+                    <span class="tag" data-i18n="projects.sfml3tag2">IA</span>
                 </div>
             </div>
             <div class="projeto">
                 <img src="assets/images/sfml/2D Animation_SFML.png" alt="2D Animation SFML">
                 <h3>2D Animation</h3>
-                <p>Um projeto criado para testar a implementação de animações 2D em SFML.</p>
+                <p data-i18n="projects.sfml4">Um projeto criado para testar a implementação de animações 2D em SFML.</p>
                 <div class="tags">
-                    <span class="tag">Animação 2D</span>
-                    <span class="tag">Classes</span>
+                    <span class="tag" data-i18n="projects.sfml4tag1">Animação 2D</span>
+                    <span class="tag" data-i18n="projects.sfml4tag2">Classes</span>
                 </div>
             </div>
             <div class="projeto">
                 <img src="assets/images/sfml/sphereOpenGL_SFML.png" alt="Sphere OpenGL SFML">
                 <h3>OpenGL 3D</h3>
-                <p>Um projeto criado para testar a implementação de uma esfera 3D com textura em OpenGL dentro de um
-                    ambiente SFML.</p>
+                <p data-i18n="projects.sfml5">Um projeto criado para testar a implementação de uma esfera 3D com textura em OpenGL dentro de um ambiente SFML.</p>
                 <div class="tags">
-                    <span class="tag">OpenGL</span>
-                    <span class="tag">3D</span>
+                    <span class="tag" data-i18n="projects.sfml5tag1">OpenGL</span>
+                    <span class="tag" data-i18n="projects.sfml5tag2">3D</span>
                 </div>
             </div>
         </div>
     </div>
     </div>
+
     </div>
     <div class="todosProjetos" id="demaisProjetos">
-        <h2><i class="fa-solid fa-gamepad"></i> Demais Projetos</h2>
+        <h2 data-i18n="projects.extraprojects"><i class="fa-solid fa-gamepad"></i> Projetos Extras</h2>
         <div class="gridProjetos">
             <div class="projeto">
                 <img src="assets/images/demaisProjetos/jaJoguei.png" alt="Ja Joguei">
                 <h3>Website Já Joguei</h3>
-                <p>Um site para organizar sua biblioteca de jogos e poder fazer avaliações.</p>
+                <p data-i18n="projects.ep1">Um site para organizar sua biblioteca de jogos e poder fazer avaliações.</p>
                 <a href="https://jajoguei.netlify.app/home.html" target="_blank"> Ja Joguei </a>
                 <div class="tags">
                     <span class="tag">HTML</span>
@@ -174,7 +187,7 @@
             <div class="projeto">
                 <img src="assets/images/demaisProjetos/visualise.png" alt="Visualise">
                 <h3>Visualise</h3>
-                <p>Uma ferramenta simples de edição de imagens, com multiplas opções de edição.</p>
+                <p data-i18n="projects.ep2">Uma ferramenta simples de edição de imagens, com multiplas opções de edição.</p>
                 <div class="tags">
                     <span class="tag">Java</span>
                     <span class="tag">JavaFX</span>
@@ -184,7 +197,7 @@
     </div>
 
     <footer>
-        <p>Por Vinícius de Quadros</p>
+        <p data-i18n="footer.footer">Por Vinícius de Quadros</p>
     </footer>
 </body>
 

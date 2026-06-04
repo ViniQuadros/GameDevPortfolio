@@ -7,17 +7,31 @@
     <title>Vinícius de Quadros</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/paginaJogo.css">
+
     <script src="assets/js/carrossel.js" defer></script>
+    <script src="assets/js/translations.js" defer></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="sobreMim.html">Sobre Mim</a>
-            <a href="projetos.html">Todos Projetos</a>
-            <a href="contato.html">Contato</a>
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="sobreMim.html" data-i18n="nav.about">Sobre Mim</a>
+            <a href="projetos.html" data-i18n="nav.projects">Todos Projetos</a>
+            <a href="contato.html" data-i18n="nav.contact">Contato</a>
         </nav>
+
+        <div class="langSwitcher">
+            <button onclick="switchLanguage('pt')" class="langBtn" id="btn-pt">
+                <img src="https://flagcdn.com/w40/br.png" alt="Português">
+                <span>PT</span>
+            </button>
+            <span>|</span>
+            <button onclick="switchLanguage('en')" class="langBtn" id="btn-en">
+                <img src="https://flagcdn.com/w40/us.png" alt="English">
+                <span>EN</span>
+            </button>
+        </div>
     </header>
 
 
@@ -38,25 +52,29 @@
 
     <div class="descricaoProjeto">
         <div>
-            <button onclick="window.open('https://github.com/ViniQuadros/Unity_DontQuit', '_blank')">
+            <button onclick="window.open('https://github.com/ViniQuadros/Unity_DontQuit', '_blank')"
+                data-i18n="bestgames.code">
                 Código Fonte
             </button>
-            <h2>Sobre o Projeto:</h2>
-            <p>"Don't Quit" é um jogo de plataforma 2D desenvolvido em Unity, inspirado em 'Level Devil'. O jogo conta com 10 níveis e diferentes desafios para os jogadores. Para cada fazer o jogador deve pegar a fruta para poder passar para o próximo nível. O jogo conta também com um contador de mortes que será mostrado durante e no final do jogo.</p>
+            <h2 data-i18n="bestgames.about">Sobre o Projeto:</h2>
+            <p data-i18n="bestgames.bg1">'Don't Quit' é um jogo de plataforma 2D desenvolvido em Unity, inspirado em
+                'Level Devil'. O jogo conta com 10 níveis e diferentes desafios para os jogadores. Para cada fazer o
+                jogador deve pegar a fruta para poder passar para o próximo nível. O jogo conta também com um contador
+                de mortes que será mostrado durante e no final do jogo.</p>
         </div>
         <div>
-            <h2>Pontos-Chave:</h2>
+            <h2 data-i18n="bestgames.key">Pontos-Chave:</h2>
             <ul>
-                <li>Desenvolvimento em Unity e C#</li>
-                <li>Level Design</li>
-                <li>Uso de Triggers</li>
-                <li>Plataformer</li>
+                <li data-i18n="bestgames.bg1tag1">Desenvolvimento em Unity e C#</li>
+                <li data-i18n="bestgames.bg1tag2">Level Design</li>
+                <li data-i18n="bestgames.bg1tag3">Triggers</li>
+                <li data-i18n="bestgames.bg1tag4">Plataformer</li>
             </ul>
         </div>
     </div>
 
     <footer>
-        <p>Por Vinícius de Quadros</p>
+        <p data-i18n="footer.footer">Por Vinícius de Quadros</p>
     </footer>
 </body>
 

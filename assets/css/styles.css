@@ -6,7 +6,9 @@
     --light-bronze: #d4a373ff;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #294618;
 }
 
@@ -21,6 +23,7 @@ header {
     top: 0;
     z-index: 1000;
 }
+
 header h3 {
     font-weight: bold;
     margin: 0;
@@ -28,11 +31,13 @@ header h3 {
     font-size: 1.3rem;
     letter-spacing: 0.5px;
 }
+
 header nav {
     display: flex;
     gap: 20px;
     margin-right: 20px;
 }
+
 header a {
     color: #294618;
     display: inline-block;
@@ -44,11 +49,61 @@ header a {
     border-radius: 8px;
     transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
 }
+
 header a:hover {
     color: #294618;
-    background: rgba(0, 0, 0, 0.08); /* pill highlight on hover */
+    background: rgba(0, 0, 0, 0.08);
+    /* pill highlight on hover */
     transform: scale(1.05);
-    text-decoration: none; /* cleaner without underline since we have the bg */
+    text-decoration: none;
+    /* cleaner without underline since we have the bg */
+}
+
+.langSwitcher {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    /* separates from nav links */
+    padding-left: 20px;
+}
+
+.langBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: transform 0.2s ease, background 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.langBtn img {
+    width: 28px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 3px;
+    display: block;
+}
+
+.langBtn span {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #294618;
+}
+
+.langBtn:hover {
+    transform: scale(1.2);
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.langBtn.active {
+    outline: 2px solid #294618;
+    border-radius: 6px;
 }
 
 body {
